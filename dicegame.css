@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+	/* border: 1px solid red; */
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+
+body {
+	position: relative;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	font-size: 12px;
+}
+
+.no-select {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.no-select:focus {
+	outline: none !important;
+}
+
+table,
+td {
+	border: 3px solid #1e1e1e;
+}
+
+table {
+	height: 70vh;
+}
+
+td {
+	padding: 3px;
+}
+
+small {
+	font-size: 10px;
+}
+
+.container {
+	background-image: linear-gradient(to bottom, #5cc7eb 2%, #980a72 98%);
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 100%;
+}
+
+.dice-boxes {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin: 20px 0;
+	height: 20vh;
+}
+
+.dice-box {
+	display: flex;
+	border-radius: 50%;
+	height: 100px;
+	width: 100px;
+	background-color: #000;
+	margin: 0 10px;
+}
+
+.players {
+	display: flex;
+	justify-content: space-around;
+	font-size: 20px;
+	color: gold;
+}
+
+.roll-btn {
+	height: 40px;
+	width: 400px;
+	background-color: gold;
+	color: #1e1e1e;
+	border: none;
+	border-radius: 20px;
+	margin: 0 auto 10px auto;
+	cursor: pointer;
+}
+
+.game-dice {
+	height: 70px;
+	width: 70px;
+	align-self: center;
+	margin: auto auto;
+	border-radius: 10px;
+}
+
+.die {
+	width: 20px;
+	height: 20px;
+}
+
+.score-cards {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 20px;
+}
+
+.score-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 45%;
+}
+
+.scoreBox {
+	width: 50px;
+	color: gold;
+	font-size: 18px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.scoreBox:hover {
+	background-color: #ffffff40;
+}
+
+.arrow {
+	height: 30px;
+	width: 100px;
+}

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dicegame.css">
+  <title>Dice Game</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="dice-boxes">
+      <div class="dice-box">
+        <img class="game-dice die1" src="dice-1.png" alt="" srcset="">
+      </div>
+      <div class="dice-box">
+        <img class="game-dice die2" src="dice-1.png" alt="" srcset="">
+      </div>
+      <div class="dice-box">
+        <img class="game-dice die3" src="dice-1.png" alt="" srcset="">
+      </div>
+      <div class="dice-box">
+        <img class="game-dice die4" src="dice-1.png" alt="" srcset="">
+      </div>
+      <div class="dice-box">
+        <img class="game-dice die5" src="dice-1.png" alt="" srcset="">
+      </div>
+    </div>
+    <button class="roll-btn"><span>PLAYER 1</span> ROLL!</button>
+
+    <div class="players">
+      <p>Player 1</p>
+      <p>Player 2</p>
+    </div>
+    <div class="score-cards">
+      <!-- PLAYER 1 SCORE CARD -->
+      <div class="score-card">
+        <!-- PLAYER 1 UPPER SECTION -->
+        <table>
+          <tr>
+            <th>Upper Section</th>
+            <th>How to Score</th>
+            <th>Score</th>
+          </tr>
+          <tr>
+            <td>Aces <img class="die" src="dice-1.png" alt="" srcset=""> =1 pt.</td>
+            <td>Count and Add<br>Only Aces</td>
+            <td class="scoreBox" id="p1Aces"></td>
+          </tr>
+          <tr>
+            <td>Twos <img class="die" src="dice-2.png" alt="" srcset=""> =2 pts.</td>
+            <td>Count and Add<br>Only Twos</td>
+            <td class="scoreBox" id="p1Twos"></td>
+          </tr>
+          <tr>
+            <td>Threes <img class="die" src="dice-3.png" alt="" srcset=""> =3 pts.</td>
+            <td>Count and Add<br>Only Threes</td>
+            <td class="scoreBox" id="p1Threes"></td>
+          </tr>
+          <tr>
+            <td>Fours <img class="die" src="dice-4.png" alt="" srcset=""> =4 pts.</td>
+            <td>Count and Add<br>Only Fours</td>
+            <td class="scoreBox" id="p1Fours"></td>
+          </tr>
+          <tr>
+            <td>Fives <img class="die" src="dice-5.png" alt="" srcset=""> =5 pts.</td>
+            <td>Count and Add<br>Only Fives</td>
+            <td class="scoreBox" id="p1Fives"></td>
+          </tr>
+          <tr>
+            <td>Sixes <img class="die" src="dice-6.png" alt="" srcset=""> =6 pts.</td>
+            <td>Count and Add<br>Only Sixes</td>
+            <td class="scoreBox" id="p1Sixes"></td>
+          </tr>
+          <tr>
+            <td>TOTAL SCORE</td>
+            <td><img class="arrow" src="arrow.png" alt="" srcset=""></td>
+            <td class="scoreBox" id="p1UpperSubScore"></td>
+          </tr>
+          <tr>
+            <td>BONUS<br><small>If total score is 63 or over</small></td>
+            <td>SCORE 35 pts.</td>
+            <td class="scoreBox" id="p1UpperBonus"></td>
+          </tr>
+          <tr>
+            <td>TOTAL <small>Of Upper Section</small></td>
+            <td><img class="arrow" src="arrow.png" alt="" srcset=""></td>
+            <td class="scoreBox" id="p1UpperScore"></td>
+          </tr>
+        </table>
+
+        <!-- PLAYER 1 LOWER SECTION -->
+
+        <table>
+          <tr>
+            <th>Lower Section</th>
+            <th>How to Score</th>
+            <th>Score</th>
+          </tr>
+          <tr>
+            <td>3 of a kind</td>
+            <td>Add Total of All Dice</td>
+            <td class="scoreBox" id="p1Trips"></td>
+          </tr>
+          <tr>
+            <td>4 of a kind</td>
+            <td>Add Total of All Dice</td>
+            <td class="scoreBox" id="p1Quads"></td>
+          </tr>
+          <tr>
+            <td>Full House</td>
+            <td>SCORE 25</td>
+            <td class="scoreBox" id="p1FullHouse"></td>
+          </tr>
+          <tr>
+            <td>Small Straight<br><small>Sequence of 4</small></td>
+            <td>SCORE 30</td>
+            <td class="scoreBox" id="p1SmStraight"></td>
+          </tr>
+          <tr>
+            <td>Large Straight<br><small>Sequence of 5</small></td>
+            <td>SCORE 40</td>
+            <td class="scoreBox" id="p1LgStraight"></td>
+          </tr>
+          <tr>
+            <td>YAHTZEE</td>
+            <td>SCORE 50</td>
+            <td class="scoreBox" id="p1Yahtzee"></td>
+          </tr>
+          <tr>
+            <td>Chance</td>
+            <td>Add Total of All Dice</td>
+            <td class="scoreBox" id="p1Chance"></td>
+          </tr>
+          <tr>
+            <td>TOTAL <small>Of Lower Section</small></td>
+            <td></td>
+            <td class="scoreBox" id="p1LowerSubScore"></td>
+          </tr>
+          <tr>
+            <td>TOTAL <small>Of Upper Section</small></td>
+            <td></td>
+            <td class="scoreBox" id="p1UpperScore"></td>
+          </tr>
+          <tr>
+            <td>GRAND TOTAL</td>
+            <td></td>
+            <td class="scoreBox" id="p1GrandTotal"></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- PLAYER 2 SCORE CARD -->
+
+      <div class="score-card">
+
+        <!-- PLAYER 2 UPPER SECTION -->
+
+        <table>
+          <tr>
+            <th>Upper Section</th>
+            <th>How to Score</th>
+            <th>Score</th>
+          </tr>
+          <tr>
+            <td>Aces <img class="die" src="dice-1.png" alt="" srcset=""> = 1 pt.</td>
+            <td>Count and Add<br>Only Aces</td>
+            <td class="scoreBox" id="p2Aces"></td>
+          </tr>
+          <tr>
+            <td>Twos <img class="die" src="dice-2.png" alt="" srcset=""> = 2 pts.</td>
+            <td>Count and Add<br>Only Twos</td>
+            <td class="scoreBox" id="p2Twos"></td>
+          </tr>
+          <tr>
+            <td>Threes <img class="die" src="dice-3.png" alt="" srcset=""> = 3 pts.</td>
+            <td>Count and Add<br>Only Threes</td>
+            <td class="scoreBox" id="p2Threes"></td>
+          </tr>
+          <tr>
+            <td>Fours <img class="die" src="dice-4.png" alt="" srcset=""> = 4 pts.</td>
+            <td>Count and Add<br>Only Fours</td>
+            <td class="scoreBox" id="p2Fours"></td>
+          </tr>
+          <tr>
+            <td>Fives <img class="die" src="dice-5.png" alt="" srcset=""> = 5 pts.</td>
+            <td>Count and Add<br>Only Fives</td>
+            <td class="scoreBox" id="p2Fives"></td>
+          </tr>
+          <tr>
+            <td>Sixes <img class="die" src="dice-6.png" alt="" srcset=""> = 6 pts.</td>
+            <td>Count and Add<br>Only Sixes</td>
+            <td class="scoreBox" id="p2Sixes"></td>
+          </tr>
+          <tr>
+            <td>TOTAL SCORE</td>
+            <td><img class="arrow" src="arrow.png" alt="" srcset=""></td>
+            <td class="scoreBox" id="p2UpperSubScore"></td>
+          </tr>
+          <tr>
+            <td>BONUS<br><small>If total score is 63 or over</small></td>
+            <td>SCORE 35 pts.</td>
+            <td class="scoreBox" id="p2UpperBonus"></td>
+          </tr>
+          <tr>
+            <td>TOTAL <small>Of Upper Section</small></td>
+            <td><img class="arrow" src="arrow.png" alt="" srcset=""></td>
+            <td class="scoreBox" id="p2UpperScore"></td>
+          </tr>
+        </table>
+
+        <!-- PLAYER 2 LOWER SECTION -->
+
+        <table>
+          <tr>
+            <th>Lower Section</th>
+            <th>How to Score</th>
+            <th>Score</th>
+          </tr>
+          <tr>
+            <td>3 of a kind</td>
+            <td>Add Total of All Dice</td>
+            <td class="scoreBox" id="p2Trips"></td>
+          </tr>
+          <tr>
+            <td>4 of a kind</td>
+            <td>Add Total of All Dice</td>
+            <td class="scoreBox" id="p2Quads"></td>
+          </tr>
+          <tr>
+            <td>Full House</td>
+            <td>SCORE 25</td>
+            <td class="scoreBox" id="p2FullHouse"></td>
+          </tr>
+          <tr>
+            <td>Small Straight<br><small>Sequence of 4</small></td>
+            <td>SCORE 30</td>
+            <td class="scoreBox" id="p2SmStraight"></td>
+          </tr>
+          <tr>
+            <td>Large Straight<br><small>Sequence of 5</small></td>
+            <td>SCORE 40</td>
+            <td class="scoreBox" id="p2LgStraight"></td>
+          </tr>
+          <tr>
+            <td>YAHTZEE</td>
+            <td>SCORE 50</td>
+            <td class="scoreBox" id="p2Yahtzee"></td>
+          </tr>
+          <tr>
+            <td>Chance</td>
+            <td>Add Total of All Dice</td>
+            <td class="scoreBox" id="p2Chance"></td>
+          </tr>
+          <tr>
+            <td>TOTAL <small>Of Lower Section</small></td>
+            <td></td>
+            <td class="scoreBox" id="p2LowerSubScore"></td>
+          </tr>
+          <tr>
+            <td>TOTAL <small>Of Upper Section</small></td>
+            <td></td>
+            <td class="scoreBox" id="p2UpperScore"></td>
+          </tr>
+          <tr>
+            <td>GRAND TOTAL</td>
+            <td></td>
+            <td class="scoreBox" id="p2GrandTotal"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="dicegame.js"></script>
+</body>
+
+</html>
