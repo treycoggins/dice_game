@@ -57,7 +57,7 @@ small {
 	width: 100%;
 }
 
-.dice-boxes {
+.dice-box-container {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -136,4 +136,22 @@ small {
 .arrow {
 	height: 30px;
 	width: 100px;
+}
+
+.locked {
+	background-color: red;
+}
+
+.pulse {
+	animation: 0.5s linear 0s infinite alternate pulse;
+	background-color: orange;
+}
+
+@keyframes pulse {
+	from {
+		transform: scale(1, 1);
+	}
+	to {
+		 transform: scale(1.2, 1.2);
+	}
 }
