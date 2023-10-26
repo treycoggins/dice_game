@@ -83,6 +83,13 @@ small {
 	color: gold;
 }
 
+.winner-box {
+	font-size: 8rem;
+	color: gold;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	margin: auto auto;
+}
+
 .roll-btn {
 	height: 40px;
 	width: 400px;
@@ -142,16 +149,22 @@ small {
 	background-color: red;
 }
 
+.scored {
+	background-color: purple;
+}
+
 .pulse {
-	animation: 0.5s linear 0s infinite alternate pulse;
-	background-color: orange;
+	animation: 0.5s linear 0s 4 alternate pulse;
 }
 
 @keyframes pulse {
 	from {
 		transform: scale(1, 1);
+		background-color: orange;
+
 	}
 	to {
-		 transform: scale(1.2, 1.2);
+		 transform: scale(1.2, 1.4);
+		 background-color: gold;
 	}
 }

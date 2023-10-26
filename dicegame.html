@@ -10,6 +10,7 @@
 
 <body>
   <div class="container">
+    <h1 id="winner-box" class="winner-box"></h1>
     <div class="dice-box-container">
       <div class="dice-box">
         <img class="game-dice die1" src="dice-1.png" alt="" srcset="">
@@ -46,47 +47,42 @@
           <tr>
             <td>Aces <img class="die" src="dice-1.png" alt="" srcset=""> =1 pt.</td>
             <td>Count and Add<br>Only Aces</td>
-            <td class="scoreBox" id="p1Aces"></td>
+            <td class="scoreBox" id="p1Aces" data-section="upper"></td>
           </tr>
           <tr>
             <td>Twos <img class="die" src="dice-2.png" alt="" srcset=""> =2 pts.</td>
             <td>Count and Add<br>Only Twos</td>
-            <td class="scoreBox" id="p1Twos"></td>
+            <td class="scoreBox" id="p1Twos" data-section="upper"></td>
           </tr>
           <tr>
             <td>Threes <img class="die" src="dice-3.png" alt="" srcset=""> =3 pts.</td>
             <td>Count and Add<br>Only Threes</td>
-            <td class="scoreBox" id="p1Threes"></td>
+            <td class="scoreBox" id="p1Threes" data-section="upper"></td>
           </tr>
           <tr>
             <td>Fours <img class="die" src="dice-4.png" alt="" srcset=""> =4 pts.</td>
             <td>Count and Add<br>Only Fours</td>
-            <td class="scoreBox" id="p1Fours"></td>
+            <td class="scoreBox" id="p1Fours" data-section="upper"></td>
           </tr>
           <tr>
             <td>Fives <img class="die" src="dice-5.png" alt="" srcset=""> =5 pts.</td>
             <td>Count and Add<br>Only Fives</td>
-            <td class="scoreBox" id="p1Fives"></td>
+            <td class="scoreBox" id="p1Fives" data-section="upper"></td>
           </tr>
           <tr>
             <td>Sixes <img class="die" src="dice-6.png" alt="" srcset=""> =6 pts.</td>
             <td>Count and Add<br>Only Sixes</td>
-            <td class="scoreBox" id="p1Sixes"></td>
+            <td class="scoreBox" id="p1Sixes" data-section="upper"></td>
           </tr>
           <tr>
             <td>TOTAL SCORE</td>
             <td><img class="arrow" src="arrow.png" alt="" srcset=""></td>
-            <td class="scoreBox" id="p1UpperSubScore"></td>
+            <td class="scoreBox" id="p1UpperScore"></td>
           </tr>
           <tr>
             <td>BONUS<br><small>If total score is 63 or over</small></td>
             <td>SCORE 35 pts.</td>
             <td class="scoreBox" id="p1UpperBonus"></td>
-          </tr>
-          <tr>
-            <td>TOTAL <small>Of Upper Section</small></td>
-            <td><img class="arrow" src="arrow.png" alt="" srcset=""></td>
-            <td class="scoreBox" id="p1UpperScore"></td>
           </tr>
         </table>
 
@@ -101,37 +97,37 @@
           <tr>
             <td>3 of a kind</td>
             <td>Add Total of All Dice</td>
-            <td class="scoreBox" id="p1Trips"></td>
+            <td class="scoreBox" id="p1Trips" data-section="lower"></td>
           </tr>
           <tr>
             <td>4 of a kind</td>
             <td>Add Total of All Dice</td>
-            <td class="scoreBox" id="p1Quads"></td>
+            <td class="scoreBox" id="p1Quads" data-section="lower"></td>
           </tr>
           <tr>
             <td>Full House</td>
             <td>SCORE 25</td>
-            <td class="scoreBox" id="p1FullHouse"></td>
+            <td class="scoreBox" id="p1FullHouse" data-section="lower"></td>
           </tr>
           <tr>
             <td>Small Straight<br><small>Sequence of 4</small></td>
             <td>SCORE 30</td>
-            <td class="scoreBox" id="p1SmStraight"></td>
+            <td class="scoreBox" id="p1SmStraight" data-section="lower"></td>
           </tr>
           <tr>
             <td>Large Straight<br><small>Sequence of 5</small></td>
             <td>SCORE 40</td>
-            <td class="scoreBox" id="p1LgStraight"></td>
+            <td class="scoreBox" id="p1LgStraight" data-section="lower"></td>
           </tr>
           <tr>
             <td>YAHTZEE</td>
             <td>SCORE 50</td>
-            <td class="scoreBox" id="p1Yahtzee"></td>
+            <td class="scoreBox" id="p1Yahtzee" data-section="lower"></td>
           </tr>
           <tr>
             <td>Chance</td>
             <td>Add Total of All Dice</td>
-            <td class="scoreBox" id="p1Chance"></td>
+            <td class="scoreBox" id="p1Chance" data-section="lower"></td>
           </tr>
           <tr>
             <td>TOTAL <small>Of Lower Section</small></td>
@@ -141,7 +137,7 @@
           <tr>
             <td>TOTAL <small>Of Upper Section</small></td>
             <td></td>
-            <td class="scoreBox" id="p1UpperScore"></td>
+            <td class="scoreBox" id="p1UpperSubScore"></td>
           </tr>
           <tr>
             <td>GRAND TOTAL</td>
@@ -166,47 +162,42 @@
           <tr>
             <td>Aces <img class="die" src="dice-1.png" alt="" srcset=""> = 1 pt.</td>
             <td>Count and Add<br>Only Aces</td>
-            <td class="scoreBox" id="p2Aces"></td>
+            <td class="scoreBox" id="p2Aces" data-section="upper"></td>
           </tr>
           <tr>
             <td>Twos <img class="die" src="dice-2.png" alt="" srcset=""> = 2 pts.</td>
             <td>Count and Add<br>Only Twos</td>
-            <td class="scoreBox" id="p2Twos"></td>
+            <td class="scoreBox" id="p2Twos" data-section="upper"></td>
           </tr>
           <tr>
             <td>Threes <img class="die" src="dice-3.png" alt="" srcset=""> = 3 pts.</td>
             <td>Count and Add<br>Only Threes</td>
-            <td class="scoreBox" id="p2Threes"></td>
+            <td class="scoreBox" id="p2Threes" data-section="upper"></td>
           </tr>
           <tr>
             <td>Fours <img class="die" src="dice-4.png" alt="" srcset=""> = 4 pts.</td>
             <td>Count and Add<br>Only Fours</td>
-            <td class="scoreBox" id="p2Fours"></td>
+            <td class="scoreBox" id="p2Fours" data-section="upper"></td>
           </tr>
           <tr>
             <td>Fives <img class="die" src="dice-5.png" alt="" srcset=""> = 5 pts.</td>
             <td>Count and Add<br>Only Fives</td>
-            <td class="scoreBox" id="p2Fives"></td>
+            <td class="scoreBox" id="p2Fives" data-section="upper"></td>
           </tr>
           <tr>
             <td>Sixes <img class="die" src="dice-6.png" alt="" srcset=""> = 6 pts.</td>
             <td>Count and Add<br>Only Sixes</td>
-            <td class="scoreBox" id="p2Sixes"></td>
+            <td class="scoreBox" id="p2Sixes" data-section="upper"></td>
           </tr>
           <tr>
             <td>TOTAL SCORE</td>
             <td><img class="arrow" src="arrow.png" alt="" srcset=""></td>
-            <td class="scoreBox" id="p2UpperSubScore"></td>
+            <td class="scoreBox" id="p2UpperScore"></td>
           </tr>
           <tr>
             <td>BONUS<br><small>If total score is 63 or over</small></td>
             <td>SCORE 35 pts.</td>
             <td class="scoreBox" id="p2UpperBonus"></td>
-          </tr>
-          <tr>
-            <td>TOTAL <small>Of Upper Section</small></td>
-            <td><img class="arrow" src="arrow.png" alt="" srcset=""></td>
-            <td class="scoreBox" id="p2UpperScore"></td>
           </tr>
         </table>
 
@@ -221,7 +212,7 @@
           <tr>
             <td>3 of a kind</td>
             <td>Add Total of All Dice</td>
-            <td class="scoreBox" id="p2Trips"></td>
+            <td class="scoreBox" id="p2Trips" data-section="lower"></td>
           </tr>
           <tr>
             <td>4 of a kind</td>
@@ -231,27 +222,27 @@
           <tr>
             <td>Full House</td>
             <td>SCORE 25</td>
-            <td class="scoreBox" id="p2FullHouse"></td>
+            <td class="scoreBox" id="p2FullHouse" data-section="lower"></td>
           </tr>
           <tr>
             <td>Small Straight<br><small>Sequence of 4</small></td>
             <td>SCORE 30</td>
-            <td class="scoreBox" id="p2SmStraight"></td>
+            <td class="scoreBox" id="p2SmStraight" data-section="lower"></td>
           </tr>
           <tr>
             <td>Large Straight<br><small>Sequence of 5</small></td>
             <td>SCORE 40</td>
-            <td class="scoreBox" id="p2LgStraight"></td>
+            <td class="scoreBox" id="p2LgStraight" data-section="lower"></td>
           </tr>
           <tr>
             <td>YAHTZEE</td>
             <td>SCORE 50</td>
-            <td class="scoreBox" id="p2Yahtzee"></td>
+            <td class="scoreBox" id="p2Yahtzee" data-section="lower"></td>
           </tr>
           <tr>
             <td>Chance</td>
             <td>Add Total of All Dice</td>
-            <td class="scoreBox" id="p2Chance"></td>
+            <td class="scoreBox" id="p2Chance" data-section="lower"></td>
           </tr>
           <tr>
             <td>TOTAL <small>Of Lower Section</small></td>
@@ -261,7 +252,7 @@
           <tr>
             <td>TOTAL <small>Of Upper Section</small></td>
             <td></td>
-            <td class="scoreBox" id="p2UpperScore"></td>
+            <td class="scoreBox" id="p2UpperSubScore"></td>
           </tr>
           <tr>
             <td>GRAND TOTAL</td>
